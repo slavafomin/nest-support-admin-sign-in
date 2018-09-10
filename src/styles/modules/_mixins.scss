@@ -1,0 +1,8 @@
+
+@import './variables';
+
+
+@mixin light-on-dark() {
+  background-color: $nst-color-dark;
+  color: $nst-color-light-on-dark;
+}

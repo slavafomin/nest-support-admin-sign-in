@@ -1,0 +1,24 @@
+
+// sass-lint:disable indentation, trailing-semicolon
+
+// Regular typography (e.g. paragraphs, menus, etc)
+@font-face {
+  font-family: 'Akkurat';
+  font-weight: normal;
+  font-style: normal;
+  src:
+    url('/fonts/akkurat/akkurat.woff2') format('woff2'),
+    url('/fonts/akkurat/akkurat.woff') format('woff')
+  ;
+}
+
+// Heading typography
+@font-face {
+  font-family: 'Akkurat Light';
+  font-weight: normal;
+  font-style: normal;
+  src:
+    url('/fonts/akkurat-light/akkurat-light.woff2') format('woff2'),
+    url('/fonts/akkurat-light/akkurat-light.woff') format('woff')
+  ;
+}

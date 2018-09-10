@@ -1,0 +1,24 @@
+
+@import './variables';
+
+
+html {
+  color: $nst-color-dark;
+  font-family: 'Akkurat', sans-serif;
+  font-size: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: 'Akkurat Light', sans-serif;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $nst-color-cyan;
+}

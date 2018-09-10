@@ -1,0 +1,44 @@
+{
+  "options": {
+    "merge-default-rules": true
+  },
+  "files": {
+    "include": "**/*.scss",
+    "ignore": "**/node_modules/**/*"
+  },
+  "rules": {
+    "no-important": 2,
+    "quotes": [2, { "style": "single" }],
+    "url-quotes": 2,
+    "hex-notation": [2, { "style": "lowercase" }
+    ],
+    "indentation": [2, { "size": 2 }
+    ],
+    "property-sort-order": [2,
+      {
+        "order": "concentric",
+        "ignore-custom-properties": true
+      }
+    ],
+    "single-line-per-selector": 0,
+    "leading-zero": 0,
+    "nesting-depth": [2, { "max-depth": 8 }],
+    "class-name-format": [2, {
+      "allow-leading-underscore": true,
+      "convention": "hyphenatedbem"
+    }],
+    "hex-length": [2, {
+      "style": "long"
+    }],
+    "empty-args": [2, {
+      "include": true
+    }],
+    "no-empty-rulesets": 0,
+    "force-pseudo-nesting": 0,
+    "force-element-nesting": 0,
+    "no-css-comments": 0,
+    "shorthand-values": [2, {
+      "allowed-shorthands": [1, 2]
+    }]
+  }
+}

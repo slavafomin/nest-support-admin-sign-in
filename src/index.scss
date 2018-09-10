@@ -1,0 +1,153 @@
+
+// Importing normalize.css styles using "postcss-normalize"
+// noinspection CssInvalidAtRule
+@import-normalize;
+
+// Modules
+@import './styles/modules/variables';
+@import './styles/modules/mixins';
+@import './styles/modules/fonts';
+@import './styles/modules/typography';
+
+
+$footer-height: 42px;
+$padding-size: 24px;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$button-width: 200px;
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $nst-color-white;
+}
+
+
+.nst-layout {
+  margin-bottom: $footer-height + $padding-size;
+  padding: 40px $padding-size 0 $padding-size;
+  min-width: $button-width + 2 * $padding-size;
+}
+
+.nst-header {
+
+  &__logo {
+    height: 40px;
+  }
+
+  &__title {
+    margin-top: 1px;
+    white-space: nowrap;
+    font-size: 28px;
+  }
+
+}
+
+.nst-sign-in {
+
+  &__button {
+
+    display: inline-block;
+    margin-top: 33px;
+    background-color: $nst-color-orange;
+    width: $button-width;
+    height: 40px;
+
+    .abcRioButtonBlue { // sass-lint:disable-line class-name-format
+      background-color: transparent !important; // sass-lint:disable-line no-important
+    }
+
+  }
+
+  &__hint {
+    margin-top: 21px;
+    line-height: 20px;
+  }
+
+  &__hint-br {
+    display: none;
+  }
+
+  &__link {
+    margin-top: 12px;
+  }
+
+}
+
+.nst-footer {
+
+  @include light-on-dark();
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $footer-height;
+  font-size: 12px;
+
+  &__copyright {
+    text-align: center;
+    line-height: $footer-height;
+  }
+
+}
+
+@media (min-width: 600px) {
+
+  html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .nst-layout {
+    position: relative;
+    margin: 0;
+    box-shadow: $shadow-color 0 0 6px 2px;
+    padding: 90px 0 0 0;
+    width: 450px;
+    height: 450px;
+  }
+
+  .nst-header {
+    text-align: center;
+  }
+
+  .nst-sign-in {
+
+    text-align: center;
+
+    &__hint-br {
+      display: inline-block;
+    }
+
+  }
+
+  .nst-footer {
+    position: absolute;
+  }
+
+  @media (max-height: 550px) {
+
+    html {
+      min-height: 350px;
+    }
+
+    .nst-layout {
+      padding: 35px 0 0 0;
+      width: 350px;
+      height: 350px;
+    }
+
+  }
+
+}
+
+.nst-nobr {
+  white-space: nowrap;
+}
