@@ -194,13 +194,6 @@ accessibility issues.
 ## Live Demo
 
 - http://support-admin-sign-in.nest.projects.fomin.io/
-
-## Issues
-
-- The Google Sign In Button is not always rendered.
-  Probably, there is some racing condition there. It needs to be debugged further.
-  I didn't have enough time to configure Webpack to properly control
-  the order of scripts execution.
   
 ## Time Spent
 
