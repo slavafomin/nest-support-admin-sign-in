@@ -16,10 +16,14 @@ const GOOGLE_BUTTON_OPTIONS = {
 };
 
 
-window.onGooglePlatformLoad = onGooglePlatformLoad;
+if (window.gapi) {
+  loadAuth();
+} else {
+  window.onGooglePlatformLoad = loadAuth;
+}
 
 
-function onGooglePlatformLoad() {
+function loadAuth() {
   gapi.load('auth2', () => gapi.auth2
     .init(GOOGLE_AUTH2_SETTINGS)
     .then(() => onAuthInit())
